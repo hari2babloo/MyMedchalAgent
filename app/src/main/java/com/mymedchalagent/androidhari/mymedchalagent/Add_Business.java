@@ -189,9 +189,9 @@ fillcategory();
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.e("Spinner", subcatlist.get(position));
-                String spinnerlocation = subcatlist.get(position);
+                String spinnerlocation2 = subcatlist.get(position);
 
-
+                tinyDB.putString("subcat", spinnerlocation2);
                 if (position>0){
 
                     next.setVisibility(View.VISIBLE);

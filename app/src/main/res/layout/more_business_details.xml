@@ -16,142 +16,161 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/propname"
-            android:hint="Propreitor Name *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/contact1"
-            android:inputType="number"
-            android:hint="Contact Number *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/contact2"
-            android:inputType="number"
-            android:hint="Contact Number 2 "
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/contact3"
-            android:inputType="number"
-            android:hint="Contact Number 3 "
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/whatsapp"
-            android:inputType="number"
-            android:hint="Whatsapp Number *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/email"
-            android:hint="Email ID * *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/desc"
-            android:hint="Description *"
-            />
-        <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/services"
-        android:hint="Services *"
-        />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/cost"
-            android:hint="Enter Cost *"
-            />
 
-        <EditText
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/timinfrom"
-            android:hint="Timing From *"
-            />
+            android:layout_marginBottom="10sp"
+            android:gravity="center_horizontal|fill_vertical"
+            android:text="Business Information"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/timingto"
-        android:hint="Timing To *"
-        />
-        <EditText
+        <LinearLayout
+            android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/workingdays"
-            android:hint="Working Days *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/since"
-            android:hint="Since Year *"
-            />
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/address"
-            android:hint="Address *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/landmark"
-            android:hint="Landmark *"
-            />
+            <EditText
+                android:id="@+id/propname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Propreitor Name *" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lane"
-            android:hint="Lane *"
-            />
+            <EditText
+                android:id="@+id/businesname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Business Name *" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lat"
-            android:hint="Latitude *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lon"
-            android:hint="Longitude *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/website"
-            android:hint="Lane *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/video"
-            android:hint="Video Link *"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/img"
-            android:hint="Add Logo *"
-            />
+            <EditText
+                android:id="@+id/contact1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number *"
+                android:inputType="number" />
 
-</LinearLayout>
+            <EditText
+                android:id="@+id/contact2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number 2 "
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Whatsapp Number *"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email ID * *" />
+
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description *" />
+
+            <EditText
+                android:id="@+id/services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Services *" />
+
+            <EditText
+                android:id="@+id/cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Cost *" />
+
+            <EditText
+                android:id="@+id/timinfrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Timing From *" />
+
+            <EditText
+                android:id="@+id/timingto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Timing To *" />
+
+            <EditText
+                android:id="@+id/workingdays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Working Days *" />
+
+            <EditText
+                android:id="@+id/since"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Since Year *" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/adres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address *" />
+
+            <EditText
+                android:id="@+id/landmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Landmark *" />
+
+            <EditText
+                android:id="@+id/lane"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lane *" />
+
+            <EditText
+                android:id="@+id/lat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Latitude *" />
+
+            <EditText
+                android:id="@+id/lon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Longitude *" />
+
+            <EditText
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lane *" />
+
+            <EditText
+                android:id="@+id/video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Video Link *" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </ScrollView>

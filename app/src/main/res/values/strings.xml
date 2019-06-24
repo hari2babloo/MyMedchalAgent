@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">My Medchal Agent</string>
+    <string name="errpropname"> Enter Proprietor name</string>
+    <string name="errbname">Enter Business Name</string>
+    <string name="errcontact"> Enter Contact Number</string>
+    <string name="errwhatsap"> Enter Whatsapp Number</string>
+    <string name="erremail">Enter Email ID</string>
+    <string name="errdesc"> Enter Description</string>
+    <string name="errservices"> Enter Your Services</string>
+    <string name="errcost"> Enter Your Cost</string>
+    <string name="errtmingfrom">Enter Timings From </string>
+    <string name="errtmingto">Enter Timings to</string>
+    <string name="errworkingdays">Enter Working Days</string>
+    <string name="erryearsince">Enter Timings to</string>
+    <string name="erraddr">Enter Address</string>
+    <string name="errlandmark">Enter landmark</string>
+    <string name="errlane">Enter lane</string>
+    <string name="errlat">Enter latitude</string>
+    <string name="errlng">Enter longitude</string>
+    <string name="erraddlogo">Enter addlogo</string>
+
+
 </resources>
