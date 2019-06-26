@@ -45,6 +45,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.mymedchalagent.androidhari.mymedchalagent.Claass.DetailsModel;
+import com.mymedchalagent.androidhari.mymedchalagent.Claass.RequestsModel;
 import com.mymedchalagent.androidhari.mymedchalagent.Claass.TinyDB;
 import com.mymedchalagent.androidhari.mymedchalagent.SupportFiles.ScalingUtilities;
 
@@ -193,32 +194,32 @@ submiphotoanddata();
         final DatabaseReference myRef = database.getReference("BusinessLists").child(tinyDB.getString("aarea"));
         DetailsModel detailsModel = new DetailsModel();
         //
-        detailsModel.setName(businesname.toString());
-        detailsModel.setPropname(propname.toString());
-        detailsModel.setContact(contact1.toString());
-        detailsModel.setContact2(contact2.toString());
+        detailsModel.setName(businesname.getText().toString());
+        detailsModel.setPropname(propname.getText().toString());
+        detailsModel.setContact(contact1.getText().toString());
+        detailsModel.setContact2(contact2.getText().toString());
         //detailsModel.setContact3("756");
-        detailsModel.setEmail(emailid.toString());
+        detailsModel.setEmail(emailid.getText().toString());
         detailsModel.setAwards("No");
-        detailsModel.setAddress(address.toString());
+        detailsModel.setAddress(address.getText().toString());
         detailsModel.setLocation(tinyDB.getString("aarea"));
-        detailsModel.setDescription(desc.toString());
-        detailsModel.setLandmark(landmark.toString());
-        detailsModel.setLane(lane.toString());
-        detailsModel.setLat(lat.toString());
-        detailsModel.setLng(lng.toString());
-        detailsModel.setWhatsapp(whatsappno.toString());
-        detailsModel.setTimingsfrom(timingfro.toString());
-        detailsModel.setTimingsto(timingto.toString());
+        detailsModel.setDescription(desc.getText().toString());
+        detailsModel.setLandmark(landmark.getText().toString());
+        detailsModel.setLane(lane.getText().toString());
+        detailsModel.setLat(lat.getText().toString());
+        detailsModel.setLng(lng.getText().toString());
+        detailsModel.setWhatsapp(whatsappno.getText().toString());
+        detailsModel.setTimingsfrom(timingfro.getText().toString());
+        detailsModel.setTimingsto(timingto.getText().toString());
         detailsModel.setWebsite("na");
-        detailsModel.setWorkindays(workingdays.toString());
+        detailsModel.setWorkindays(workingdays.getText().toString());
         detailsModel.setImg("imglink");
 //        detailsModel.setVideo("Videolink");
   //      detailsModel.setRating("9");
         detailsModel.setSubcategory(tinyDB.getString("subcat"));
-        detailsModel.setCost(cost.toString());
+        detailsModel.setCost(cost.getText().toString());
         detailsModel.setCategory(tinyDB.getString("cat"));
-        detailsModel.setSince(yearsince.toString());
+        detailsModel.setSince(yearsince.getText().toString());
         detailsModel.setBand("na");
 
         DatabaseReference sss = myRef.push();
@@ -243,6 +244,42 @@ submiphotoanddata();
 
 
 //                Log.e("valuesuploades",mGroupId);
+
+
+
+                pd.setMessage("Updating Requests");
+                pd.setCancelable(false);
+                pd.show();
+
+                final FirebaseDatabase database = FirebaseDatabase.getInstance();
+                final DatabaseReference myRef = database.getReference("requests").child(tinyDB.getString("aarea")).child(tinyDB.getString("requestkey"));
+//        RequestsModel requestsModel = new RequestsModel();
+//        requestsModel.setVisitdate(selecteddate);
+                myRef.child("status").setValue("FINISHED");
+                myRef.child("key").setValue(tinyDB.getString("key"));
+                myRef.child("statusmsg").setValue("Your Details are Live");
+                pd.dismiss();
+
+
+                pd.dismiss();
+
+
+
+                pd.setMessage("Creating Seller Profile");
+                pd.setCancelable(false);
+                pd.show();
+
+                final FirebaseDatabase database2 = FirebaseDatabase.getInstance();
+                final DatabaseReference myRef2 = database2.getReference("ServiceProvider").child(tinyDB.getString("uid"));
+        RequestsModel requestsModel = new RequestsModel();
+        requestsModel.setKey(tinyDB.getString("key"));
+        requestsModel.setStatus("OPEN");
+        requestsModel.setLocation(tinyDB.getString("aarea"));
+        requestsModel.setTimestamp(System.currentTimeMillis());
+                myRef2.push().setValue(requestsModel);
+
+                pd.dismiss();
+
 
                 pd.dismiss();
 

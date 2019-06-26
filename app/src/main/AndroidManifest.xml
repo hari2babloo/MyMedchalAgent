@@ -22,6 +22,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Dashpage" />
+        <activity android:name=".Schedules" />
+        <activity android:name=".Requests" />
+
+
         <activity android:name=".SampleUpload"></activity>
         <activity android:name=".Add_Business" />
         <activity android:name=".More_BusinessDetails" />

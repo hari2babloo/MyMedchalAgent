@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+
 
 public class Dashpage extends AppCompatActivity {
 
@@ -18,6 +18,18 @@ public class Dashpage extends AppCompatActivity {
 
         startActivity(new Intent(Dashpage.this,Add_Business.class));
 
-        Toast.makeText(Dashpage.this, "Clicked", Toast.LENGTH_SHORT).show();
+
+    }
+    public void schedule2(View v){
+
+        startActivity(new Intent(Dashpage.this,Schedules.class));
+
+
+    }
+    public void requests2(View v){
+
+        startActivity(new Intent(Dashpage.this,Requests.class));
+
+
     }
 }
