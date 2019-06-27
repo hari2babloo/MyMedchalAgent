@@ -28,6 +28,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:16.1.0'
     implementation 'com.google.firebase:firebase-database:16.1.0'
     implementation 'com.firebaseui:firebase-ui-database:4.3.2'
+         implementation 'com.google.android.libraries.places:places:1.1.0'
+
 
     implementation 'com.basgeekball:awesome-validation:4.2'
     testImplementation 'junit:junit:4.12'

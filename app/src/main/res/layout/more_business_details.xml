@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:foregroundGravity="center"
-    tools:context="com.mymedchalagent.androidhari.mymedchalagent.Add_Business">
+    android:foregroundGravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,6 +25,12 @@
             android:text="Business Information"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
 
         <LinearLayout
             android:id="@+id/info"

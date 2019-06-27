@@ -64,7 +64,8 @@ public class More_BusinessDetails extends AppCompatActivity {
     LinearLayout Linfo,Laddr;
     String picturepath;
     ProgressDialog pd;
-    Button submit;
+
+    Button submit,button;
     String imageuploaded;
     TinyDB tinyDB;
 
@@ -75,7 +76,18 @@ public class More_BusinessDetails extends AppCompatActivity {
         mAwesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         tinyDB = new TinyDB(this);
         pd = new ProgressDialog(this);
+        button = (Button)findViewById(R.id.button);
 
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
+            }
+        });
         Linfo = (LinearLayout)findViewById(R.id.info);
         Laddr = (LinearLayout)findViewById(R.id.adres);
         Laddr.setVisibility(View.VISIBLE);
@@ -258,6 +270,8 @@ submiphotoanddata();
                 myRef.child("status").setValue("FINISHED");
                 myRef.child("key").setValue(tinyDB.getString("key"));
                 myRef.child("statusmsg").setValue("Your Details are Live");
+                myRef.child("bname").setValue(businesname.getText().toString());
+                myRef.child("subcategory").setValue(tinyDB.getString("subcat"));
                 pd.dismiss();
 
 
@@ -276,6 +290,8 @@ submiphotoanddata();
         requestsModel.setStatus("OPEN");
         requestsModel.setLocation(tinyDB.getString("aarea"));
         requestsModel.setTimestamp(System.currentTimeMillis());
+        requestsModel.setBname(businesname.getText().toString());
+                myRef.child("subcategory").setValue(tinyDB.getString("subcat"));
                 myRef2.push().setValue(requestsModel);
 
                 pd.dismiss();

@@ -2,6 +2,7 @@ package com.mymedchalagent.androidhari.mymedchalagent;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class Add_Business extends AppCompatActivity {
     ProgressDialog pd;
     DatabaseReference databaseReference;
     TinyDB tinyDB;
-
+    Button button;
         ArrayList<String> catlist = new ArrayList<>();
         ArrayList<String> subcatlist = new ArrayList<>();
     TextView locationtxt;
@@ -58,7 +59,11 @@ fillcategory();
 //fillsubcategory();
 
 
+
+
     }
+
+
 
     private void fillcategory() {
 
